@@ -68,7 +68,24 @@ switch (opcaoDesejada)
 
         break;
     case "/":
-        Console.WriteLine("Você selecionou divisão");
+        Console.WriteLine("divisão A / B \n");
+
+        Console.Write("A = ");
+        a = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("B = ");
+        b = Convert.ToDouble(Console.ReadLine());
+        if (b == 0)
+        {
+            Console.WriteLine("não é possivel dividir 0");
+        }
+        else 
+        {
+            resultado = a / b;
+            Console.WriteLine($"{a} multiplicado por {b} é {resultado}");
+        }
+        Console.WriteLine("\nPressione uma tecla para continuar...");
+        Console.ReadKey();
         break;
     default:
         Console.WriteLine("Opção inválida.");
